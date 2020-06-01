@@ -17,31 +17,6 @@ const FolderSelection = () => {
           <img src={folder} alt='folder-roskomnadzor' />
         </Card>
       </Link>
-      <Link to='orb-others' className='folder'>
-        <Card title='ОРВ-другие'>
-          <img src={folder} alt='folder-orb-others' />
-        </Card>
-      </Link>
-      <Link to='orb-fz' className='folder'>
-        <Card title='ОРВ-ФЗ'>
-          <img src={folder} alt='folder-orb-fz' />
-        </Card>
-      </Link>
-      <Link to='sanPin-TkYP' className='folder'>
-        <Card title='СанПин ТкУП'>
-          <img src={folder} alt='folder-sanPin-TkYP' />
-        </Card>
-      </Link>
-      <Link to='sanPin-YT' className='folder'>
-        <Card title='СанПин УТ'>
-          <img src={folder} alt='folder-sanPin-YT' />
-        </Card>
-      </Link>
-      <Link to='sanPin-SPpOBT' className='folder'>
-        <Card title='СанПин СПпОВТ'>
-          <img src={folder} alt='folder-sanPin-SPpOBT' />
-        </Card>
-      </Link>
     </div>
   )
 }
