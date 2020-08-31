@@ -7,6 +7,7 @@ import React, { useEffect } from 'react'
 import { Breadcrumb, Card } from 'antd'
 import Source from './MPSource/Source'
 import './index.styl'
+import Ruler from './MPRuller/Ruler'
 
 const MainPage = () => {
   const selectedExcelName = useSelector(state => state.source.selectedExcelFileName)
@@ -14,7 +15,6 @@ const MainPage = () => {
   const type = useSelector(state => state.source.type)
   const dispatch = useDispatch()
   const params = useParams()
-
   useEffect(() => {
     if (!type) {
       dispatch(selectFolder(params.type))
@@ -34,11 +34,16 @@ const MainPage = () => {
         <Breadcrumb>
           <Breadcrumb.Item><Link to='/'><HomeOutlined /></Link></Breadcrumb.Item>
           <Breadcrumb.Item><Link to={`/${params.type}`}>Исходные положения</Link></Breadcrumb.Item>
-          <Breadcrumb.Item>{selectedWordName}</Breadcrumb.Item>
+          <Breadcrumb.Item>{
+            selectedWordName
+          }
+          </Breadcrumb.Item>
           <Breadcrumb.Item>{selectedExcelName}</Breadcrumb.Item>
         </Breadcrumb>
       </div>
-
+      <div className='MainPage-ruler'>
+        <Ruler />
+      </div>
       <div className='content'>
         <div className='Mainpage-paragraphs'>
           <Card title='Исходный файл'>
